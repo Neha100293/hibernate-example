@@ -10,10 +10,10 @@
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-		<!--  <property name="hbm2ddl.auto">update</property>-->
+		<!-- <property name="hbm2ddl.auto">update</property> -->
 		<property name="show_sql">true</property>
 		<mapping class="com.neha.model.UserDetails"></mapping>
-
+		<mapping class="com.neha.model.Product"></mapping>
 
 	</session-factory>
 </hibernate-configuration>
