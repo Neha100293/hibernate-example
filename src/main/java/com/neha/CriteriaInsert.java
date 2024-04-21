@@ -10,9 +10,9 @@ public class CriteriaInsert {
 
 	public static void main(String[] args) {
 		Product product = new Product();
-		product.setProductId(2);
-		product.setProductName("Mouse");
-		product.setPrice(999);
+		product.setProductId(3);
+		product.setProductName("MousePad");
+		product.setPrice(399);
 		Configuration cfg = new Configuration();
 		cfg.configure("/com/neha/hibernate.cfg.xml");
 		SessionFactory sessionFactory = cfg.buildSessionFactory();

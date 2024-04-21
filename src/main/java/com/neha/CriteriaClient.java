@@ -32,7 +32,7 @@ public class CriteriaClient {
 		criteriaQuery.select(productRoot);
 
 		// **Adding where clause**
-		criteriaQuery.where(builder.equal(productRoot.get("price"), Double.valueOf(1999)));
+		criteriaQuery.where(builder.equal(productRoot.get("price"), Double.valueOf(399)));
 		List<Product> listProduct = session.createQuery(criteriaQuery).getResultList();
 
 		System.out.println("List total size..._" + listProduct.size());
