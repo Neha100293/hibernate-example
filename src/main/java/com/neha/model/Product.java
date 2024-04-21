@@ -1,6 +1,7 @@
 package com.neha.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.Table;
@@ -9,6 +10,7 @@ import org.hibernate.annotations.Table;
 @Table (appliesTo="Product")
 public class Product {
 @Id 
+
 	private int productId;
 	private String productName;
 	private double price;
