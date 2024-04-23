@@ -19,19 +19,15 @@ public class CriteriaClient {
 
 		cfg.configure("/com/neha/hibernate.cfg.xml");
 
-		// create sessionFactory object
 		SessionFactory factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
-		// session.save(product);
 
-		// **creating CriteriaBuilder**
 		CriteriaBuilder builder = session.getCriteriaBuilder();
 		CriteriaQuery<Product> criteriaQuery = builder.createQuery(Product.class);
 
 		Root<Product> productRoot = criteriaQuery.from(Product.class);
 		criteriaQuery.select(productRoot);
 
-		// **Adding where clause**
 		criteriaQuery.where(builder.equal(productRoot.get("price"), Double.valueOf(499)));
 		List<Product> listProduct = session.createQuery(criteriaQuery).getResultList();
 
